@@ -53,7 +53,7 @@ class SearchBox extends React.Component {
       loading: false,
       country: ""
     };
-    /// here we could also use arow function instead of binding them in the constructor, 
+    /// here we could also use arrow functions instead of binding them in the constructor, 
     //but I preferred to do it this way as I read in some articles that it will be  a bit more 
     //optimized behind the scenes if we bind the callbacks in here
     this.handleSearchChange = this.handleSearchChange.bind(this);

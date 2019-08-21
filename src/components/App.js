@@ -24,7 +24,7 @@ const styles = theme => ({
 class App extends Component {
   constructor(props) {
     super(props);
-    /// here we could also use arow function instead of binding them in the constructor,
+    /// here we could also use arrow functions instead of binding them in the constructor,
     //but I preferred to do it this way as I read in some articles that it will be  a bit more
     //optimized behind the scenes if we bind the callbacks in here
     this.handleTabChange = this.handleTabChange.bind(this);
