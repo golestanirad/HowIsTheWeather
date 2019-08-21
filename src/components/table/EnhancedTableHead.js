@@ -33,8 +33,6 @@ const EnhancedTableHead = ({
   rowCount,
   onRequestSort
 }) => {
-
-
   const createSortHandler = property => event => {
     onRequestSort(event, property);
   };

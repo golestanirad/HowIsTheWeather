@@ -11,8 +11,7 @@ import SearchBox from "../containers/SearchBox";
 import WeatherTable from "../containers/WeatherTable";
 import ForecastTable from "../containers/ForecastTable";
 
-
-const styles = (theme) => ({
+const styles = theme => ({
   swipeContainer: {
     backgroundColor: "red",
     width: "90%",
@@ -25,6 +24,9 @@ const styles = (theme) => ({
 class App extends Component {
   constructor(props) {
     super(props);
+    /// here we could also use arow function instead of binding them in the constructor,
+    //but I preferred to do it this way as I read in some articles that it will be  a bit more
+    //optimized behind the scenes if we bind the callbacks in here
     this.handleTabChange = this.handleTabChange.bind(this);
     this.state = { value: 0, masked: false };
   }
@@ -33,7 +35,7 @@ class App extends Component {
     this.setState({ value });
   }
 
-  render() {  
+  render() {
     const { classes } = this.props;
     return (
       <div
@@ -70,10 +72,10 @@ class App extends Component {
 
 App.propTypes = {
   classes: PropTypes.object.isRequired,
-  toggleMask:PropTypes.bool.isRequired,
-  weatherData:PropTypes.array.isRequired,
+  toggleMask: PropTypes.bool.isRequired,
+  weatherData: PropTypes.array.isRequired,
   forecastData: PropTypes.array.isRequired
 };
 
 App = withStyles(styles)(App);
-export default (App);
+export default App;

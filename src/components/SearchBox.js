@@ -53,6 +53,9 @@ class SearchBox extends React.Component {
       loading: false,
       country: ""
     };
+    /// here we could also use arow function instead of binding them in the constructor, 
+    //but I preferred to do it this way as I read in some articles that it will be  a bit more 
+    //optimized behind the scenes if we bind the callbacks in here
     this.handleSearchChange = this.handleSearchChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCountryChange = this.handleCountryChange.bind(this);
@@ -92,6 +95,9 @@ class SearchBox extends React.Component {
 
   render() {
     const { classes } = this.props;
+    //here, we could also use Formik or React-Final-Form to handle the search box, 
+    //but as I had already used react-final-form in the project that put in my resume (lets-smoke-less)
+    // here I wanted to show that if for any reasons we don't want to use form libraries, how we can handle a simple form instead.
     return (
       <Paper className={classes.container}>
         <form onSubmit={this.handleSubmit} className={classes.form}>
