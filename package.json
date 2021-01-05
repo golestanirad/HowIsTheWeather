@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.3.2",
     "@material-ui/icons": "^3.0.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "google-map-react": "^1.1.1",
     "lodash": "^4.17.11",
     "pigeon-maps": "^0.11.8",
